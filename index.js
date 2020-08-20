@@ -4,8 +4,8 @@
   for (card of cards) {
     const windowHeight = window.innerHeight;
 
-    const cardMargin = windowHeight * 0.1;
-    const cardHeight = windowHeight * 0.8;
+    const cardMargin = windowHeight * 0.05;
+    const cardHeight = windowHeight * 0.9;
     card.style.height =  cardHeight+ "px";
     card.style.top = cardMargin + "px";
 

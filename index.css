@@ -22,12 +22,10 @@ html, body {
 
 .card {
   position: absolute;
-  left: 20px;
   overflow: hidden;
-  width: calc(100% - 40px);
-  height: 80vh;
-  margin: 10vh auto;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  left: 20px;
+  right: 20px;
 }
 
 .outside {
@@ -140,5 +138,21 @@ html, body {
 
   .inside__name_wrapper__and {
     font-size: 5vmin;
+  }
+
+  .inside__hero_text {
+    font-size: 2vmin;
+  }
+
+  .inside__family_name {
+    font-size: 3vmin;
+  }
+
+  .inside__address {
+    font-size: 2vmin;
+  }
+
+  .inside__note {
+    font-size: 1.5vmin;
   }
 }

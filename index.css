@@ -1,5 +1,6 @@
 :root {
   --margin: 20px;
+  --fontSizeUnit: vmin;
 }
 
 html, body {
@@ -9,11 +10,24 @@ html, body {
   overflow: hidden;
 }
 
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
 .card {
-  position: relative;
+  position: absolute;
+  left: 20px;
+  overflow: hidden;
   width: calc(100% - 40px);
   height: 80vh;
   margin: 10vh auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .outside {
@@ -22,6 +36,7 @@ html, body {
   align-items: center;
   justify-content: center;
   background: #E0E0E0;
+  z-index: 1;
 }
 
 .inside {
@@ -29,18 +44,17 @@ html, body {
   flex-direction: column;
   justify-content: space-around;
   background: #E0E0E0;
-  opacity: 0;
-  visibility: hidden;
+  z-index: 2;
 }
 
 .outside__name {
   font-family: 'Great Vibes', cursive;
-  font-size: 15vw;
+  font-size: 15vmin;
   font-weight: 500;
 }
 
 .outside__and {
-  font-size: 7.5vw;
+  font-size: 7.5vmin;
   line-height: .5em;
   font-weight: 500;
 }
@@ -50,13 +64,13 @@ html, body {
   bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 5vw;
+  font-size: 5vmin;
   font-weight: 400;
 }
 
 .inside__name_first_letter_wrapper {
   position: relative;
-  font-size: 10vw;
+  font-size: 10vmin;
   font-weight: 700;
   text-align: center;
   display: block;
@@ -81,35 +95,35 @@ html, body {
 }
 
 .inside__name_wrapper__and {
-  font-size: 10vw;
+  font-size: 10vmin;
   line-height: 0.5em;
 }
 
 .inside__name_wrapper__name {
-  font-size: 15vw;
+  font-size: 15vmin;
 }
 
 .inside__hero_text {
   text-align: center;
   color: #9E9E9E;
-  font-size: 3vw;
+  font-size: 3vmin;
   padding: 0 20px;
 }
 
 .inside__family_name {
   text-align: center;
-  font-size: 5vw;
+  font-size: 5vmin;
   margin-bottom: 20px;
 }
 
 .inside__address {
-  font-size: 3vw;
+  font-size: 3vmin;
   margin-bottom: 5px;
   text-align: center;
 }
 
 .inside__note {
-  font-size: 3vw;
+  font-size: 3vmin;
   text-align: center;
 }
 
@@ -121,10 +135,10 @@ html, body {
   }
 
   .inside__name_wrapper__name {
-    font-size: 10vw;
+    font-size: 10vmin;
   }
 
   .inside__name_wrapper__and {
-    font-size: 5vw;
+    font-size: 5vmin;
   }
 }

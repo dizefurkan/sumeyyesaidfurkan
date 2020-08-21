@@ -34,25 +34,67 @@ html, body {
   transform: translateY(0);
 }
 
-.hide {
-  /* visibility: hidden; */
-  /* opacity: 0; */
-  transform: translateY(calc(98% + 20px));
+.outside.hide {
+  animation-name: cardOutlineHide;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
-.show {
-  animation-name: cardInner;
+.inside.hide {
+  animation-name: cardInnerHide;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.outside.show {
+  animation-name: cardOutlineShow;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.inside.show {
+  animation-name: cardInnerShow;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   visibility: visible !important;
 }
 
-@keyframes cardInner {
+@keyframes cardOutlineHide {
+  from {
+    translate: translateY(0);
+  }
+  to {
+    transform: translateY(calc(98% + 20px));
+  }
+}
+
+@keyframes cardOutlineShow {
+  from {
+    transform: translateY(calc(98% + 20px));
+  }
+  to {
+    translate: translateY(0);
+  }
+}
+
+@keyframes cardInnerShow {
   0% {
     transform: translateY(0%);
   }
   25% {
     transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes cardInnerHide {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(25%);
   }
   100% {
     transform: translateY(0%);
@@ -78,7 +120,9 @@ html, body {
 }
 
 .outside__name {
-  font-family: 'Great Vibes', cursive;
+  /* font-family: 'Great Vibes', cursive; */
+  /* font-family: 'Nothing You Could Do', cursive; */
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 14vmin;
   font-weight: 500;
 }

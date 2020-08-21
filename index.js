@@ -19,7 +19,9 @@
 
     card.onclick = () => {
       outside.classList.toggle("hide");
+      outside.classList.toggle("show");
       inside.classList.toggle("show");
+      inside.classList.toggle("hide");
     }
     card.onmousedown = (event) => {
       console.log("MOUSE DOWN", event)

@@ -13,21 +13,15 @@
     : maxHeight * 0.05;
   const cardHeight = maxHeight * 0.9;
 
+  outside.onclick = () => {
+    outside.classList.toggle("hide");
+    outside.classList.toggle("show");
+    inside.classList.toggle("show");
+    inside.classList.toggle("hide");
+  }
+
   for (card of cards) {
     card.style.height =  cardHeight + "px";
     card.style.top = cardTop + "px";
-
-    card.onclick = () => {
-      outside.classList.toggle("hide");
-      outside.classList.toggle("show");
-      inside.classList.toggle("show");
-      inside.classList.toggle("hide");
-    }
-    card.onmousedown = (event) => {
-      console.log("MOUSE DOWN", event)
-    }
-    card.onmouseup = (event) => {
-      console.log("MOUSE UP", event)
-    }
   };
 })();
